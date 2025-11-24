@@ -2,11 +2,7 @@
 
 **Showcase репозиторий демонстрационной версии коммерческого проекта**
 
----
-
-# 🖼 Баннер проекта
-
-> *Здесь будет баннер проекта (PNG/JPG)*
+![Alt text](./banner.png)
 
 *(Можно добавить позже — я подготовлю макет.)*
 
@@ -193,3 +189,4 @@ digraph Architecture {
 
 * Telegram: @yourusername
 * Email: [your@mail.com](mailto:your@mail.com)
+
