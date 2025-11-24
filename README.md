@@ -78,53 +78,7 @@ Telegram-бот, использующий нейросети (генерация
 
 # 🏛 Архитектура (высокоуровневая диаграмма)
 
-flowchart LR
-    subgraph K8s[Cluster: Kubernetes]
-        subgraph NS[Namespace: neuronet]
-            subgraph App[Application layer]
-                Bot[Telegram Bot / API Gateway]
-                Core[Core API Service]
-                Roles[Roles & Profiles Service]
-                Billing[Billing / Payments Service]
-                Media[Media / Images Service]
-            end
-
-            subgraph Infra[Core Services]
-                PG[(PostgreSQL)]
-                RDS[(Redis)]
-                MQ[(RabbitMQ)]
-            end
-
-            subgraph Logging[Logging stack]
-                Loki[(Loki)]
-                Promtail[Promtail]
-                Grafana[Grafana]
-            end
-        end
-    end
-
-    TG[Telegram API] --> Bot
-
-    Bot --> Core
-    Bot --> Roles
-    Bot --> Billing
-    Bot --> Media
-
-    Core --> PG
-    Core --> RDS
-    Core --> MQ
-
-    Roles --> PG
-    Billing --> PG
-    Media --> PG
-
-    MQ -->|Workers| Worker1[Workers: text jobs]
-    MQ --> Worker2[Workers: image jobs]
-
-    Worker1 --> AI[AI / LLM providers]
-    Worker2 --> AI
-
-    Promtail --> Loki --> Grafana
+![Архитектура проекта](./diagram.png)
 
 ---
 
@@ -274,5 +228,6 @@ flowchart LR
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
