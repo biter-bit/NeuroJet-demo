@@ -1,5 +1,3 @@
-# 📦 NeuroJet Project
-
 ![**Showcase репозиторий демонстрационной версии коммерческого проекта**](./banner.png)
 
 ---
@@ -185,5 +183,6 @@ digraph Architecture {
 
 * Telegram: @yourusername
 * Email: [your@mail.com](mailto:your@mail.com)
+
 
 
