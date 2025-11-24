@@ -249,5 +249,6 @@ digraph Architecture {
 
 # 📞 Контакты
 
-* Telegram: @kurashevmichael
+* Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
