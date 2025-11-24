@@ -78,30 +78,53 @@ Telegram-бот, использующий нейросети (генерация
 
 # 🏛 Архитектура (высокоуровневая диаграмма)
 
-```mermaid
-digraph Architecture {
-    rankdir=LR;
+flowchart LR
+    subgraph K8s[Cluster: Kubernetes]
+        subgraph NS[Namespace: neuronet]
+            subgraph App[Application layer]
+                Bot[Telegram Bot / API Gateway]
+                Core[Core API Service]
+                Roles[Roles & Profiles Service]
+                Billing[Billing / Payments Service]
+                Media[Media / Images Service]
+            end
 
-    TG[shape=box, label="Telegram API"];
-    Gateway[shape=box, label="API Gateway / Bot Server"];
-    Core[shape=box, label="Core API Service"];
-    Redis[shape=box, label="Redis Cache"];
-    MQ[shape=box, label="RabbitMQ"];
-    Workers[shape=box, label="Worker Services"];
-    DB[shape=box, label="PostgreSQL"];
-    AI[shape=box, label="AI/ML Services"];
-    K8s[shape=box, label="Kubernetes Cluster"];
+            subgraph Infra[Core Services]
+                PG[(PostgreSQL)]
+                RDS[(Redis)]
+                MQ[(RabbitMQ)]
+            end
 
-    TG -> Gateway;
-    Gateway -> Core;
-    Core -> Redis;
-    Core -> DB;
-    Core -> MQ;
-    MQ -> Workers;
-    Workers -> AI;
-    Core -> AI;
-}
-```
+            subgraph Logging[Logging stack]
+                Loki[(Loki)]
+                Promtail[Promtail]
+                Grafana[Grafana]
+            end
+        end
+    end
+
+    TG[Telegram API] --> Bot
+
+    Bot --> Core
+    Bot --> Roles
+    Bot --> Billing
+    Bot --> Media
+
+    Core --> PG
+    Core --> RDS
+    Core --> MQ
+
+    Roles --> PG
+    Billing --> PG
+    Media --> PG
+
+    MQ -->|Workers| Worker1[Workers: text jobs]
+    MQ --> Worker2[Workers: image jobs]
+
+    Worker1 --> AI[AI / LLM providers]
+    Worker2 --> AI
+
+    Promtail --> Loki --> Grafana
 
 ---
 
@@ -251,4 +274,5 @@ digraph Architecture {
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
