@@ -220,7 +220,7 @@ Telegram-бот, использующий нейросети (генерация
 
 ### 🔒 Надёжность
 
-* Миграции в продакшене → **0 даунтайма**
+* Миграции в продакшене выполнялись без даунтайма.
 
 ---
 
@@ -248,6 +248,7 @@ Telegram-бот, использующий нейросети (генерация
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
 
