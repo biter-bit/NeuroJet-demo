@@ -84,7 +84,10 @@ Telegram-бот, использующий нейросети (генерация
 
 # 🏛 Архитектура (высокоуровневая диаграмма)
 
+Prod version
 ![Production version](./neurojet-prod.png)
+
+Dev version
 ![Development version](./neurojet-dev.png)
 
 ---
@@ -255,6 +258,7 @@ Telegram-бот, использующий нейросети (генерация
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
 
