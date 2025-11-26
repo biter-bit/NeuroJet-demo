@@ -52,8 +52,8 @@ Telegram-бот, использующий нейросети (генерация
 * требовал высокой производительности и отказоустойчивости.
 
 <p align="left">
-  <img src="./ui/ui_1.jpg" width="300">
   <img src="./ui/ui_5.jpg" width="300">
+  <img src="./ui/ui_1.jpg" width="300">
 </p>
 
 ## 🤖 Основные функции:
@@ -254,6 +254,7 @@ Telegram-бот, использующий нейросети (генерация
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
 
