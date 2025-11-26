@@ -51,6 +51,8 @@ Telegram-бот, использующий нейросети (генерация
 * обрабатывал **1 000 000+ запросов в сутки**,
 * требовал высокой производительности и отказоустойчивости.
 
+![Рис. 1](./ui/ui (2).jpg)
+
 ## 🤖 Основные функции:
 
 ### **Генерация и обработка контента**
@@ -249,6 +251,7 @@ Telegram-бот, использующий нейросети (генерация
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
 
