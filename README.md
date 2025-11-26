@@ -53,6 +53,7 @@ Telegram-бот, использующий нейросети (генерация
 
 <p align="left">
   <img src="./ui/ui_5.jpg" width="300">
+  <img src="./ui/ui_12.jpg" width="300">
   <img src="./ui/ui_1.jpg" width="300">
 </p>
 
@@ -254,6 +255,7 @@ Telegram-бот, использующий нейросети (генерация
 
 * Telegram: [@kurashevmichael](https://t.me/kurashevmichael)
 * Email: [kurashevmichael@gmail.com](mailto:kurashevmichael@gmail.com)
+
 
 
 
